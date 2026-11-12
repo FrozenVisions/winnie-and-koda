@@ -319,22 +319,51 @@ section { padding: 3rem 0; }
 /* Merch */
 .merch-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 .merch-card {
   background: var(--paper);
   border-radius: var(--radius);
-  padding: 1.2rem 1rem 1.15rem;
+  padding: 0;
   text-align: center;
   box-shadow: var(--shadow);
-  min-height: 10.5rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.35rem;
+}
+.merch-card img {
+  width: 100%;
+  height: auto;
+  background: var(--cream);
+}
+.merch-copy {
+  padding: 1rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
 }
 .merch-card h3 { margin: 0; font-size: 1.35rem; }
+.merch-card .blank { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+.merch-card .price {
+  margin: 0.35rem 0 0.75rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--teal-deep);
+}
+.merch-card .price span {
+  display: block;
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.merch-card .btn { margin-top: auto; }
+.merch-note {
+  margin: 1.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
 .soon {
   display: inline-block;
   margin: 0 auto;
@@ -347,7 +376,6 @@ section { padding: 3rem 0; }
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
 }
-.merch-card p { margin: 0; color: var(--ink-soft); }
 
 /* FAQ + socials */
 .faq { display: grid; gap: 0.7rem; }
