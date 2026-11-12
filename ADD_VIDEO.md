@@ -23,7 +23,7 @@ ffmpeg -y -i "$SRC" \
 ffmpeg -y -ss 0.5 -i "$OUT/${STEM}.mp4" -frames:v 1 -q:v 3 "$OUT/${STEM}.jpg"
 ```
 
-If the MP4 is over ~10 MB, raise CRF (try 28 or 29) and re-encode. Check that `moov` comes before `mdat`, and that ffprobe shows `h264` 720×1280 plus `aac`.
+If the MP4 is over ~10 MB, raise CRF (try 28 or 29) and re-encode. Check that `moov` comes before `mdat`, and that ffprobe shows `h264` 720×1280 plus `aac`. If Composio’s `GITHUB_COMMIT_MULTIPLE_FILES` returns HTTP 413, the base64 payload is too large — re-encode at CRF 30 so the MP4 is about 3 MB or under (base64 under ~3.8 MB) and commit that file on its own.
 
 ## 2. Add a card at the top of the Latest videos grid
 
