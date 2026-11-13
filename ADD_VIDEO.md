@@ -2,6 +2,8 @@
 
 The live site is a static GitHub Pages site from `FrozenVisions/winnie-and-koda`, branch `main`. The working copy of the site is `/workspace/winnie-koda/site/` (that folder is what gets committed to the repo root). Do not change DNS. Do not post the video anywhere else from this process. Only add a video Chris has already approved and posted (or has asked to put on the site).
 
+Every TikTok post goes on the site once Chris confirms he posted it. Do not add a video before that confirmation.
+
 ## 1. Make a web-sized copy
 
 Source videos live in `/workspace/winnie-koda/videos/`. Do not commit the full-size masters (they are 20–40 MB). Encode a 720×1280 H.264 + AAC copy with a faststart moov atom, aiming under 10 MB, plus a poster JPG.
